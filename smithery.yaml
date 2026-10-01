@@ -1,0 +1,57 @@
+startCommand:
+  type: stdio
+  config:
+    command: python
+    args:
+      - "-m"
+      - "src.server"
+    env:
+      LICENSEGROUND_API_KEY: ""
+      LICENSEGROUND_API_BASE: "https://licenseground.com"
+
+configSchema:
+  type: object
+  properties:
+    LICENSEGROUND_API_KEY:
+      type: string
+      description: "Your LicenseGround API key (obtain yours at https://licenseground.com)"
+  required: []
+
+remoteEndpoints:
+  streamableHttp:
+    url: "https://licenseground.com/mcp"
+    description: "Cloud-hosted FastMCP Streamable HTTP stream for modern MCP agent runtimes."
+  sse:
+    url: "https://licenseground.com/mcp/sse"
+    description: "Cloud-hosted FastMCP Server-Sent Events stream for backwards-compatible runtimes."
+
+metadata:
+  name: "licenseground"
+  displayName: "LicenseGround - Contractor Compliance & Regulatory Truth"
+  description: "Deterministic machine-readable contractor license verification, surety bond & workers' comp insurance auditing, OSHA safety citation history, and Federal SAM.gov debarment gating for AI agents across California (CSLB), Florida (DBPR), Texas (TDLR), New York (DOB), Massachusetts (CSL), Illinois (Chicago DOB), and Arizona (ROC)."
+  version: "1.0.0"
+  categories:
+    - "enterprise"
+    - "procurement"
+    - "compliance"
+    - "verification"
+    - "b2b"
+    - "legal"
+    - "finance"
+  homepage: "https://licenseground.com"
+  repository: "https://github.com/bdzgroup12/licenseground"
+  keywords:
+    - "contractor license"
+    - "mcp server"
+    - "fastmcp"
+    - "cslb"
+    - "dbpr"
+    - "tdlr"
+    - "nyc dob"
+    - "sam.gov"
+    - "osha safety"
+    - "workers compensation"
+    - "surety bond"
+    - "autonomous accounts payable"
+    - "proptech dispatch"
+    - "agent compliance"

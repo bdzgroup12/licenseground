@@ -1,0 +1,14 @@
+[project]
+name = "licenseground"
+version = "1.0.0"
+description = "Official Model Context Protocol (MCP) Client Connector for LicenseGround Regulatory APIs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+]
+
+[project.scripts]
+licenseground = "src.server:main"
